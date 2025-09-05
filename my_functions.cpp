@@ -71,6 +71,7 @@ namespace MY_FUNCTIONS{
         -4,1,0
         -4,0,1
     */
+    /*all above test cases tested +ve againset mergeSort */
     void selectionSort(std::vector<int> &v){
         int n =v.size();
     
@@ -84,33 +85,22 @@ namespace MY_FUNCTIONS{
 
     //logic: merge sort
     void merge(std::vector<int> &v,int l,int mid,int h){
-        cout<<"merge for: "<<l<<" "<<h<<endl;
         int n1 =mid-l+1;
         int n2 =h-mid;
     
         //making space for 2 parts
-        // int a[n1+1];
         std::vector<int> a;
-
-        // int b[n2+1];
         std::vector<int> b;
     
         //filling above arrays
-        // int idx_a=0;
         for(int i =l; i<=mid; i++)
-            // a[idx_a++] =v[i];
             a.push_back(v[i]);
     
-        // int idx_b =0;
         for(int i =mid+1; i<=h; i++)
-            // b[idx_b++] =v[i];
             b.push_back(v[i]);
     
         //supporters
-        // a[n1] =INT_MAX;
         a.push_back(INT_MAX);
-
-        // b[n2] =INT_MAX;
         b.push_back(INT_MAX);
     
         //merging logic
@@ -127,7 +117,6 @@ namespace MY_FUNCTIONS{
     }
     
     void mergeSort(std::vector<int> &v,int l,int h){
-        cout<<"inside mergesort"<<endl;
         if(l>=h)
             return;
     
