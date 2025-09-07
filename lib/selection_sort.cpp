@@ -4,7 +4,12 @@
 
 
 namespace MY_FUNCTIONS{
+    //logic: selection sort
 
+    /*
+    test cases:
+    */
+    
     void selectionSort(std::vector<int> &v){
         int n =v.size();
     
@@ -14,5 +19,5 @@ namespace MY_FUNCTIONS{
             std::swap(v[i],v[idx]);
         }
     }
-    
+
 }
